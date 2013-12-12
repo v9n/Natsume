@@ -24,17 +24,8 @@ function theme_setup() {
 			'admin-head-callback'		=> 'theme_admin_header_style',
 			'admin-preview-callback'	=> 'theme_admin_header_image'
 		) );
-	} else {
-		add_theme_support( 'custom-header', array( 'random-default' => true ) );
-		//WP Custom Header - random roation by default
-		define( 'HEADER_TEXTCOLOR', '' );
-		define( 'HEADER_IMAGE', '%s/images/icons/bolt_large.png' );
-		define( 'HEADER_IMAGE_HEIGHT', '100' );
-		define( 'HEADER_IMAGE_WIDTH', '100' );
-		define('NO_HEADER_TEXT', true );
-		add_custom_image_header( 'theme_header_style', 'theme_admin_header_style', 'theme_admin_header_image' );
-	}
-	register_default_headers( array(
+  } 
+  register_default_headers( array(
 		'bolt' => array(
 			'url' => '%s/images/icons/bolt_large.png',
 			'thumbnail_url' => '%s/images/icons/thumbs/bolt.png',
@@ -73,12 +64,6 @@ function register_custom_menu() {
 }
 
 require_once ( get_template_directory() . '/theme-options.php' );
-
-
-function load_theme_scripts() {
-    wp_enqueue_style( 'farbtastic' );
-    wp_enqueue_script( 'farbtastic' );
-}
 
 function wp_svbtle_external_url( $object, $box ) { ?>
 	<?php wp_nonce_field( basename( __FILE__ ), '_wp_svbtle_external_url' ); ?>

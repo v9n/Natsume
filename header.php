@@ -24,15 +24,9 @@
 			if ( is_singular() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );
 
-			$options = get_option ( 'svbtle_options' ); 
+			$options = get_option ( 'natsume_options' ); 
 
 			echo $options['google_analytics'];
- 
-			if( isset( $options['color'] ) && '' != $options['color'] )
-				$color = $options['color'];
-			else 
-				$color = "#ff0000";
-	
       wp_head();  
 ?>
 	</head>
@@ -51,10 +45,11 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-                  <?php wp_nav_menu( [
+                  <?php echo str_replace('<a ', '<a class="pure-button pure-button-warning" ', wp_nav_menu( [
                     'theme_location' => 'primary', 
-                    'container' => false, 'items_wrap' => ''
-                  ] ); ?>
+                    'container' => false , 'items_wrap' => '%3$s',
+                    'echo' => 0
+                  ] )); ?>
                   <?php if ($options['rss-link']): ?>
                     <li class="nav-item link feed">
                         <a class="pure-button" href="<?php bloginfo('rss_url'); ?>">RSS</a>
