@@ -7,6 +7,11 @@ add_action('init', 'register_custom_menu');
 add_action( 'load-post.php', 'wp_svbtle_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'wp_svbtle_post_meta_boxes_setup' );
 
+function add_cache_header() {
+  $cache = 24 * 7 * 3600; //7 days
+  header("Cache-Control: max-age=$cache");
+}
+
 function theme_setup() {
 	global $wp_version;
 	if (version_compare($wp_version, '3.4' , '>=')){ 
