@@ -2,15 +2,20 @@
 
 add_action( 'after_setup_theme', 'theme_setup' );
 add_action( 'init', 'widgets_init' );
-add_action('admin_head', 'load_theme_scripts');
-add_action('init', 'register_custom_menu');
+add_action( 'admin_head', 'load_theme_scripts');
+add_action( 'init', 'register_custom_menu');
 add_action( 'load-post.php', 'wp_svbtle_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'wp_svbtle_post_meta_boxes_setup' );
+//add_action( 'template_redirect', 'add_cache_header');
 
-function add_cache_header() {
+add_filter('wp_headers', function ($headers) {
   $cache = 24 * 7 * 3600; //7 days
-  header("Cache-Control: max-age=$cache");
-}
+  $headers['Cache-Control'] = "max-age=$cache";
+  $time = date('Y-m-d h:i:s');
+  $header['X-Genat'] = $time;
+  $headers['X-Rev'] = 12;
+  return $headers;
+});
 
 function theme_setup() {
 	global $wp_version;
