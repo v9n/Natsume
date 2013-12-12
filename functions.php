@@ -7,9 +7,6 @@ add_action('init', 'register_custom_menu');
 add_action( 'load-post.php', 'wp_svbtle_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'wp_svbtle_post_meta_boxes_setup' );
 
-// Coming...
-// include('vendor/UCF-Theme-Updater/updater.php');
-
 function theme_setup() {
 	global $wp_version;
 	if (version_compare($wp_version, '3.4' , '>=')){ 
@@ -38,200 +35,10 @@ function theme_setup() {
 		add_custom_image_header( 'theme_header_style', 'theme_admin_header_style', 'theme_admin_header_image' );
 	}
 	register_default_headers( array(
-		'atom' => array(
-			'url' => '%s/images/icons/atom_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/atom.png',
-			'description' => 'atom'
-		),
-		'bear' => array(
-			'url' => '%s/images/icons/bear_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/bear.png',
-			'description' => 'bear'
-		),
 		'bolt' => array(
 			'url' => '%s/images/icons/bolt_large.png',
 			'thumbnail_url' => '%s/images/icons/thumbs/bolt.png',
 			'description' => 'bolt'
-		),
-		'bullhorn' => array(
-			'url' => '%s/images/icons/bullhorn_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/bullhorn.png',
-			'description' => 'bullhorn'
-		),
-		'business_man' => array(
-			'url' => '%s/images/icons/business_man_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/business_man.png',
-			'description' => 'business_man'
-		),
-		'cassette' => array(
-			'url' => '%s/images/icons/cassette_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/cassette.png',
-			'description' => 'cassette'
-		),
-		'cell_phone' => array(
-			'url' => '%s/images/icons/cell_phone_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/cell_phone.png',
-			'description' => 'cell_phone'
-		),
-		'chain_link' => array(
-			'url' => '%s/images/icons/chain_link_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/chain_link.png',
-			'description' => 'chain_link'
-		),
-		'coffee' => array(
-			'url' => '%s/images/icons/coffee_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/coffee.png',
-			'description' => 'coffee'
-		),
-		'cog_head' => array(
-			'url' => '%s/images/icons/cog_head_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/cog_head.png',
-			'description' => 'cog_head'
-		),
-		'day_night' => array(
-			'url' => '%s/images/icons/day_night_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/day_night.png',
-			'description' => 'day_night'
-		),
-		'disapprove' => array(
-			'url' => '%s/images/icons/disapprove_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/disapprove.png',
-			'description' => 'disapprove'
-		),
-		'dog' => array(
-			'url' => '%s/images/icons/dog_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/dog.png',
-			'description' => 'dog'
-		),
-		'eye' => array(
-			'url' => '%s/images/icons/eye_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/eye.png',
-			'description' => 'eye'
-		),
-		'film' => array(
-			'url' => '%s/images/icons/film_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/film.png',
-			'description' => 'film'
-		),
-		'flask' => array(
-			'url' => '%s/images/icons/flask_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/flask.png',
-			'description' => 'flask'
-		),
-		'ghost' => array(
-			'url' => '%s/images/icons/ghost_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/ghost.png',
-			'description' => 'ghost'
-		),
-		'glasses' => array(
-			'url' => '%s/images/icons/glasses_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/glasses.png',
-			'description' => 'glasses'
-		),
-		'hat' => array(
-			'url' => '%s/images/icons/hat_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/hat.png',
-			'description' => 'hat'
-		),
-		'heart' => array(
-			'url' => '%s/images/icons/heart_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/heart.png',
-			'description' => 'heart'
-		),
-		'infection' => array(
-			'url' => '%s/images/icons/infection_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/infection.png',
-			'description' => 'infection'
-		),
-		'infinity' => array(
-			'url' => '%s/images/icons/infinity_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/infinity.png',
-			'description' => 'infinity'
-		),
-		'iphone' => array(
-			'url' => '%s/images/icons/iphone_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/iphone.png',
-			'description' => 'iphone'
-		),
-		'like' => array(
-			'url' => '%s/images/icons/like_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/like.png',
-			'description' => 'like'
-		),
-		'man_stairs' => array(
-			'url' => '%s/images/icons/man_stairs_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/man_stairs.png',
-			'description' => 'man_stairs'
-		),
-		'mine_cross' => array(
-			'url' => '%s/images/icons/mine_cross_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/mine_cross.png',
-			'description' => 'mine_cross'
-		),
-		'motorcycle' => array(
-			'url' => '%s/images/icons/motorcycle_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/motorcycle.png',
-			'description' => 'motorcycle'
-		),
-		'no_smoking' => array(
-			'url' => '%s/images/icons/no_smoking_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/no_smoking.png',
-			'description' => 'no_smoking'
-		),
-		'pan_ui' => array(
-			'url' => '%s/images/icons/pan_ui_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/pan_ui.png',
-			'description' => 'pan_ui'
-		),
-		'radio' => array(
-			'url' => '%s/images/icons/radio_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/radio.png',
-			'description' => 'radio'
-		),
-		'paperplane' => array(
-			'url' => '%s/images/icons/paperplane_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/paperplane.png',
-			'description' => 'radio'
-		),
-		'robot_square' => array(
-			'url' => '%s/images/icons/robot_square_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/robot_square.png',
-			'description' => 'robot_square'
-		),
-		'soccer_shoe' => array(
-			'url' => '%s/images/icons/soccer_shoe_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/soccer_shoe.png',
-			'description' => 'soccer_shoe'
-		),
-		'automobile' => array(
-			'url' => '%s/images/icons/automobile_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/automobile.png',
-			'description' => 'automobile'
-		),
-		'guitar' => array(
-			'url' => '%s/images/icons/guitar_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/guitar.png',
-			'description' => 'guitar'
-		),
-		'acting' => array(
-			'url' => '%s/images/icons/acting_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/acting.png',
-			'description' => 'acting'
-		),
-		'cloudrain' => array(
-			'url' => '%s/images/icons/cloudrain_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/cloudrain.png',
-			'description' => 'cloudrain'
-		),
-		'whale' => array(
-			'url' => '%s/images/icons/whale_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/whale.png',
-			'description' => 'whale'
-		),
-		'money' => array(
-			'url' => '%s/images/icons/money_large.png',
-			'thumbnail_url' => '%s/images/icons/thumbs/money.png',
-			'description' => 'money'
 		),
 		'sunrise' => array(
 			'url' => '%s/images/icons/sunrise_large.png',
@@ -253,14 +60,8 @@ function widgets_init() {
 }
 
 function theme_header_style() {
-    ?><style type="text/css">
-figure.logo a, aside#logo div a, aside.kudo.complete span.circle{background-image: url(<?php header_image(); ?>);}
-    </style><?php
 }
 function theme_admin_header_style() {
-    ?><style type="text/css">
-		aside#logo div a,aside.kudo.complete span.circle{background-image: url(<?php header_image(); ?>);}
-    </style><?php
 }
 function theme_admin_header_image() {
    	?><div style="display:inline-block;height:50px;background-color:#000;"><img src=<?php header_image(); ?> height="50px"></div>
@@ -268,12 +69,10 @@ function theme_admin_header_image() {
 }
 
 function register_custom_menu() {
-	register_nav_menu( 'primary', __( 'Svbtle Menu') );
+	register_nav_menu( 'primary', __( 'Primary Menu') );
 }
 
 require_once ( get_template_directory() . '/theme-options.php' );
-
-
 
 
 function load_theme_scripts() {
@@ -426,83 +225,6 @@ function wp_svbtle_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for wp_svbtle_comment()
-
-
-
-function implement_ajax() {
-	global $wpdb;
-
-	$post_id = mysql_real_escape_string($_POST['article']);
-
-	$kudos = get_post_meta( $post_id , '_wp-svbtle-kudos', true );
-	$new_kudos = $kudos + 1;
-
-	add_post_meta( $post_id, '_wp-svbtle-kudos', 1, true ) or update_post_meta( $post_id, '_wp-svbtle-kudos', $new_kudos );
-
-	header('HTTP/1.1 200 OK');
-
-}
-
-add_action('wp_ajax_my_special_action', 'implement_ajax');
-add_action('wp_ajax_nopriv_my_special_action', 'implement_ajax');//for users that are not logged in.
-
-
-function remove_kudos() {
-	
-	global $wpdb;
-
-	$post_id = mysql_real_escape_string($_POST['article']);
-
-	$kudos = get_post_meta( $post_id , '_wp-svbtle-kudos', true );
-	$new_kudos = $kudos - 1;
-
-	if ($new_kudos < 0) $new_kudos = 0;
-
-	add_post_meta( $post_id, '_wp-svbtle-kudos', 1, true ) or update_post_meta( $post_id, '_wp-svbtle-kudos', $new_kudos );
-
-	header('HTTP/1.1 200 OK');
-
-}
-
-add_action('wp_ajax_remove_kudos', 'remove_kudos');
-add_action('wp_ajax_nopriv_remove_kudos', 'remove_kudos');//for users that are not logged in.
-
-
-// unregister all default WP Widgets
-function unregister_default_wp_widgets() {
-	unregister_widget('WP_Widget_Calendar');
-	unregister_widget('WP_Widget_Archives');
-	unregister_widget('WP_Widget_Links');
-	unregister_widget('WP_Widget_Meta');
-	unregister_widget('WP_Widget_Categories');
-	unregister_widget('WP_Widget_Recent_Posts');
-	unregister_widget('WP_Widget_Recent_Comments');
-	unregister_widget('WP_Widget_RSS');
-	unregister_widget('WP_Widget_Tag_Cloud');
-}
-add_action('widgets_init', 'unregister_default_wp_widgets', 1);
-
- 
-add_action('admin_bar_menu', 'add_items',  100);
-function add_items($admin_bar)
-{
- 	global $post;
-
-    $args = array(
-            'id'    => 'wp-svbtle-editor',
-            'title' => 'wp-svbtle editor',
-            'href'  => get_bloginfo('url') . '/wp-svbtle/',
-            'meta'  => array('title' => __('wp-svbtle editor'))
-            );
- 
- 	if (is_single() or is_page()) {
- 		$args['href'] = get_bloginfo('url') . '/wp-svbtle/index.php?page=edit&id='.$post->ID;
- 		$args['title'] = 'Edit post with wp-svbtle';
- 	}
-
-    //This is where the magic works.
-    $admin_bar->add_menu( $args);
-}
 
 // Modifying the Comment Call before and after comment_form gets called in comments.php
 add_action('comment_form_before','svbtle_comment_form_before');

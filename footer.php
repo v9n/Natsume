@@ -25,8 +25,15 @@ YUI().use('node-base', 'node-event-delegate', function (Y) {
 </script>
 
 <?php $options = get_option ( 'svbtle_options' ); ?>
-<script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+<script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script data-cfasync="false" src="<?php echo get_bloginfo('template_directory'); ?>/highlight/highlight.pack.js"></script>
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+  $('blockquote p').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>
     <?php wp_footer(); ?>
 	</body>
 </html>

@@ -1,6 +1,7 @@
 <?php if ( have_posts() ) : ?>
 
 <div class="posts">
+  <h1 class="content-subhead">Just my daily though and stuff</h1>
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php $kudos = get_post_meta( $post->ID, '_wp-svbtle-kudos', true ) ? get_post_meta( $post->ID, '_wp-svbtle-kudos', true ) : '0';?>
@@ -8,13 +9,13 @@
 			<section id="<?php the_ID(); ?>" class="post">
         <header class="post-header">
           <img class="post-avatar" width="48" height="48" src="https://1.gravatar.com/avatar/738f5eacec5048869fd3f6866f39d1af?d=https%3A%2F%2Fidenticons.github.com%2Ff816fb5e358e95c718f79cc25ee91855.png&r=x&s=48" alt="me :-)">
-          <h2 class="post entry-title"><?php print_post_title(); ?></h2>
+          <h2 class="post-title entry-title"><?php print_post_title(); ?></h2>
           <p class="meta">
             By
-            <a class="post-author"><?php the_author(); ?></a>
+            <a class="post-author" href="#" ><?php the_author(); ?></a>
             in 
-            <?php foreach ((get_the_category()) as $category) : ?>
-            <a class="post-category post-category-js" href="<?php echo get_category_link( $category->term_id );?>" title="<?php esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) )?>">
+            <?php foreach ((get_the_category()) as $key=>$category) : ?>
+            <a class="post-category post-category-<?php echo ['alpha','beta','teta', 'zeta'][$key];?>" href="<?php echo get_category_link( $category->term_id );?>" title="<?php esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) )?>">
               <?php echo $category->cat_name?>
             </a>
             <?php endforeach; ?>
@@ -31,19 +32,6 @@
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'boilerplate' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
 				<?php endif; ?>
-
-				<aside class="kudo kudoable" id="<?php the_ID(); ?>">
-					<a href="?" class="kudobject">
-						<div class="opening clearfix">
-							<span class="circle">&nbsp;</span>
-						</div>
-					</a>
-			
-					<a href="?" class="counter">
-						<span class="num"><?php echo $kudos; ?></span>
-						<span class="txt">Kudos</span>
-					</a>
-				</aside>
 			</section><!-- #post-## -->
 
 	<?php endwhile; // End the loop. Whew. ?>

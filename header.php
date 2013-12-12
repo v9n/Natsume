@@ -11,8 +11,9 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/default.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/tomorrow-night.css" />
+    <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.ico" />
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -50,25 +51,18 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-            
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-          
-            <?php if ($options['rss-link']): ?>
-              <li class="link feed">
-                  <a href="<?php bloginfo('rss_url'); ?>">feed</a>
-              </li>		
-            <?php endif ?>		
-
-                    <li class="nav-item">
-                        <a class="pure-button" href="http://purecss.io">Pure</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pure-button" href="http://yuilibrary.com">YUI Library</a>
-                    </li>
+                  <?php wp_nav_menu( [
+                    'theme_location' => 'primary', 
+                    'container' => false, 'items_wrap' => ''
+                  ] ); ?>
+                  <?php if ($options['rss-link']): ?>
+                    <li class="nav-item link feed">
+                        <a class="pure-button" href="<?php bloginfo('rss_url'); ?>">RSS</a>
+                    </li>		
+                  <?php endif ?>		
                 </ul>
             </nav>
         </header>
     </div>
     <div class="pure-u-1">
         <div class="content">
-        
