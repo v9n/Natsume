@@ -23,6 +23,18 @@ p {
   font-size: 17px;
   line-height: 27px;  
 }
+
+blockquote {
+  background: none repeat scroll 0 0 #FAFAFA;
+  margin: 1.3em 0 1em;
+  padding: 1.3em; 
+  border: 1px solid #ddd;
+  border-left: 5px solid #DDDDDD;  
+  padding-left: 1.5em;  
+  color: #666666;
+  font-family: "Georgia",serif;  
+}
+
 /* LAYOUT CSS */
 #layout {
     padding-left: 25%; /* "left col (nav + list)" width */
@@ -118,6 +130,16 @@ p {
     color: #999;
     font-size: 90%;
     margin: 0;
+}
+
+.entry-content a, .entry-content > p > span, .entry-content > p > span {
+  color: #E2F7CE;
+  font-family: Monaco;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.1em 0.4em;
+  background: #452632;
+  border-radius: 5px; 
 }
 
 .post-category {
