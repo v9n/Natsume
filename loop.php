@@ -1,7 +1,23 @@
 <?php if ( have_posts() ) : ?>
 
 <div class="posts">
-  <h1 class="content-subhead">Just my daily though and stuff</h1>
+  <h1 class="content-subhead">
+<?php 
+$post_id = get_the_ID();
+if (empty($post_id) && $key = get_post_meta($post_id, 'headline', true)) {
+  echo $s;
+} else {
+  echo ['Just my daily though and stuff', 
+    'Hoàng hà viễn thướng bạch vân gian',
+    'Nhất phiến cô thành vạn nhận san',
+    'Khương địch hà tu oán dương liễu',
+    'Xuân phong bất độ ngọc môn quan'][rand(0,4)]
+;
+}
+unset ($s);
+unset ($post_id);
+?>
+</h1>
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php $kudos = get_post_meta( $post->ID, '_wp-svbtle-kudos', true ) ? get_post_meta( $post->ID, '_wp-svbtle-kudos', true ) : '0';?>
