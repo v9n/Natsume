@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/default.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/tomorrow-night.css" />
-    <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.png" />
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -24,15 +24,10 @@
 			if ( is_singular() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );
 
-			$options = get_option ( 'natsume_options' ); 
-
-			echo $options['google_analytics'];
       wp_head();  
 ?>
 	</head>
 	<body <?php body_class(); ?>>
-
-
 
 <div class="pure-g-r" id="layout">
     <div class="sidebar pure-u">
