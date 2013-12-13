@@ -12,7 +12,9 @@ add_filter('wp_headers', function ($headers) {
   $cache = 24 * 7 * 3600; //7 days
   $headers['Cache-Control'] = "max-age=$cache";
   $time = date('Y-m-d h:i:s');
-  $header['X-Genat'] = $time;
+  $headers['X-Genat'] = $time;
+  $headers['Expires'] = NULL; //Use Cache-Control
+  $headers['Server'] = 'Axcoto'; //Use Cache-Control
   $headers['X-Rev'] = 12;
   return $headers;
 });
