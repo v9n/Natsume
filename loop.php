@@ -4,7 +4,7 @@
   <h1 class="content-subhead">
 <?php 
 $post_id = get_the_ID();
-if (empty($post_id) && $key = get_post_meta($post_id, 'headline', true)) {
+if (!empty($post_id) && $s = get_post_meta($post_id, 'headline', true)) {
   echo $s;
 } else {
   echo ['Just my daily though and stuff', 
