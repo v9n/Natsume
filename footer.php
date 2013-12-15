@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<?php	$options = get_option ( 'natsume_options' ); ?>
+<?php	empty($option) && $options = get_option ( 'natsume_options' ); ?>
 
 <script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script data-cfasync="false" src="<?php echo get_bloginfo('template_directory'); ?>/highlight/highlight.pack.js"></script>
