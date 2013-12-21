@@ -41,7 +41,7 @@ function theme_options_do_page() {
 					<tr>
 						<th><?php _e( 'Exclude category from front page', 'wordpress-natsume' ); ?></th>
 						<td>
-            <input type="text" name="natsume_options[exlude_cat]" value="<?php echo $options['exclude_cat'];?>" />
+            <input type="text" name="natsume_options[exclude_cat]" value="<?php echo $options['exclude_cat'];?>" />
 						</td>
 					</tr>
 
