@@ -8,6 +8,15 @@ add_action( 'load-post.php', 'wp_svbtle_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'wp_svbtle_post_meta_boxes_setup' );
 //add_action( 'template_redirect', 'add_cache_header');
 
+function exclude_category( $query ) {
+  $options = get_option ( 'natsume_options' ); 
+  if ($query->is_home() && $query->is_main_query() ) {
+    //
+    $query->set( 'cat', "{$options['exclude_cat']}" );
+  }
+}
+add_action( 'pre_get_posts', 'exclude_category' );
+
 add_filter('wp_headers', function ($headers) {
   $cache = 24 * 7 * 3600; //7 days
   $headers['Cache-Control'] = "max-age=$cache";

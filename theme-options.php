@@ -37,7 +37,15 @@ function theme_options_do_page() {
 						<th><?php _e( 'Your name', 'wordpress-natsume' ); ?></th>
 						<td><input class="regular-text" type="text" name="natsume_options[theme_username]" value="<?php esc_attr_e( $options['theme_username'] ); ?>" /></td>
 					</tr>
-				
+
+					<tr>
+						<th><?php _e( 'Exclude category from front page', 'wordpress-natsume' ); ?></th>
+						<td>
+            <input type="text" name="natsume_options[exlude_cat]" value="<?php echo $options['exclude_cat'];?>" />
+						</td>
+					</tr>
+
+
 					<tr>
 						<th><?php _e( 'Show RSS Link', 'wordpress-natsume' ); ?></th>
 						<td>
