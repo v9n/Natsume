@@ -1,16 +1,10 @@
             <footer class="footer">
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                      <?php echo str_replace('<a ', '<a class="pure-button pure-button-warning" ', wp_nav_menu( [
+                      <?php wp_nav_menu([
                         'theme_location' => 'secondary', 
                         'container' => false , 'items_wrap' => '%3$s',
-                        'echo' => 0
-                      ] )); ?>
-<!--
- <li><a href="http://axcoto.com/">About</a></li>
-                        <li><a href="http://twitter.com/kureikain/">Twitter</a></li>
-                        <li><a href="http://facebook.com/kureikain/">Facebook</a></li>
-                        <li><a href="http://github.com/kureikain/">Github</a></li>-->
+                        ]);?>
 
                     </ul>
                  </div>
