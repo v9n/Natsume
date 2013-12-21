@@ -82,6 +82,7 @@ function theme_admin_header_image() {
 
 function register_custom_menu() {
 	register_nav_menu( 'primary', __( 'Primary Menu') );
+	register_nav_menu( 'secondary', __( 'Secondary Menu') );
 }
 
 require_once ( get_template_directory() . '/theme-options.php' );
