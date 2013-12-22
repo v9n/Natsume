@@ -8,6 +8,48 @@ add_action( 'load-post.php', 'wp_svbtle_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'wp_svbtle_post_meta_boxes_setup' );
 //add_action( 'template_redirect', 'add_cache_header');
 
+add_filter( 'the_content', function ($content) {
+  //Replace all ``` and ``` pair to <pre><code></code></pre>
+  //Replace all ```!lang and ``` pair to <pre><code class=""></code></pre>
+  // UTF-8, `` become &#8220;
+  $sep = "\n\r\n```";
+
+  $close = "\n```";
+  $occuring = substr_count($content, $sep);
+  //die($content);
+  if ( $occuring < 1 ) {
+    //Could be an syntax error?
+    return $content;
+  }
+  $_content = '';
+  // Use  to avoid 
+  $segment = explode($sep, $content);
+
+  $total_code_block = count($segment) - 1;
+  $block = 0;
+  while ($block <= $total_code_block) {
+    $value = $segment[$block];
+    if (0 === $block) {
+      $_content = $segment[$block];
+      $block++;
+      continue;
+    }
+
+    //Find next .... for closing
+    $pos = strpos($value, $close);
+    if (FALSE !== $pos) {
+      $_content .= "<pre role=\"hw\"><code>" . substr($value, 0, $pos-1) . '</code></pre>' . substr($value, $pos+strlen($close)+1);
+    } else {
+      $_content .= $value;
+    }
+
+    $block ++;
+  }
+
+  return $_content;
+
+}, 0);
+  
 function exclude_category( $query ) {
   $options = get_option ( 'natsume_options' ); 
   if ($query->is_home() && $query->is_main_query() ) {
