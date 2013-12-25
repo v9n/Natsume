@@ -1,176 +1,176 @@
-/*
-Theme Name: Natsume
-Theme URI: http://log.axcoto.com/
-Github Theme URI: http://github.com/axcoto/blog
-Author: Vinh Nguyen (kureikain)
-Author URI: http://axcoto.com/
-Version: v1.0
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
-a {
-    text-decoration: none;
-    color: #565656; 
-}
-a:hover,
-a:focus {
-    text-decoration: underline;
-}
+  /*
+  Theme Name: Natsume
+  Theme URI: http://log.axcoto.com/
+  Github Theme URI: http://github.com/axcoto/blog
+  Author: Vinh Nguyen (kureikain)
+  Author URI: http://axcoto.com/
+  Version: v1.0
+  License: GNU General Public License v2.0
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  */
+  a {
+      text-decoration: none;
+      color: #565656; 
+  }
+  a:hover,
+  a:focus {
+      text-decoration: underline;
+  }
 
-p {
-  color: #4D4D4D;
-  font-family: 'proxima-nova',sans-serif;
-  font-size: 17px;
-  line-height: 27px;  
-}
+  p {
+    color: #4D4D4D;
+    font-family: 'proxima-nova',sans-serif;
+    font-size: 17px;
+    line-height: 27px;  
+  }
 
-blockquote {
-  background: none repeat scroll 0 0 #FAFAFA;
-  margin: 1.3em 0 1em;
-  padding: 1.3em; 
-  border: 1px solid #ddd;
-  border-left: 5px solid #DDDDDD;  
-  padding-left: 1.5em;  
-  color: #666666;
-  font-family: "Georgia",serif;  
-}
+  blockquote {
+    background: none repeat scroll 0 0 #FAFAFA;
+    margin: 1.3em 0 1em;
+    padding: 1.3em; 
+    border: 1px solid #ddd;
+    border-left: 5px solid #DDDDDD;  
+    padding-left: 1.5em;  
+    color: #666666;
+    font-family: "Georgia",serif;  
+  }
 
-/* LAYOUT CSS */
-#layout {
-    padding-left: 25%; /* "left col (nav + list)" width */
-    position: relative;
-}
+  /* LAYOUT CSS */
+  #layout {
+      padding-left: 25%; /* "left col (nav + list)" width */
+      position: relative;
+  }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    margin-left: -25%;
-    background: #FBFBFA;
-    color: #fff;
-    border-right: 1px solid #EEEEEE;
-}
+  .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 25%;
+      margin-left: -25%;
+      background: #FBFBFA;
+      color: #fff;
+      border-right: 1px solid #EEEEEE;
+  }
 
-.header {
-    margin: 10% 2em 0;
-    text-align: right;
-}
+  .header {
+      margin: 10% 2em 0;
+      text-align: right;
+  }
 
-.brand-title,
-.brand-tagline {
-    margin: 0;
-}
-.brand-title {
-    text-transform: uppercase;
-}
+  .brand-title,
+  .brand-tagline {
+      margin: 0;
+  }
+  .brand-title {
+      text-transform: uppercase;
+  }
 
-.brand-tagline {
-    font-weight: 300;
-    color: #565656; 
-}
+  .brand-tagline {
+      font-weight: 300;
+      color: #565656; 
+  }
 
-.nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+  .nav-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
 
-.menu-item, .nav-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-}
-.menu-item a, .nav-item a {
-    /*background: transparent;*/
-    /*border: 3px solid rgb(103, 103, 180);*/
-    /*color: #fff;*/
-    margin-top: 1em;
-}
-.menu-item a:hover, .nav-item a:hover,
-.menu-item a:focus, .nav-item a:focus {
-    /*border: 3px solid rgb(142, 142, 214);*/
-    /*color: rgb(142, 142, 214);*/
-    text-decoration: none;
-}
+  .menu-item, .nav-item {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+  }
+  .menu-item a, .nav-item a {
+      /*background: transparent;*/
+      /*border: 3px solid rgb(103, 103, 180);*/
+      /*color: #fff;*/
+      margin-top: 1em;
+  }
+  .menu-item a:hover, .nav-item a:hover,
+  .menu-item a:focus, .nav-item a:focus {
+      /*border: 3px solid rgb(142, 142, 214);*/
+      /*color: rgb(142, 142, 214);*/
+      text-decoration: none;
+  }
 
-.content-subhead {
-    text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-  line-height: 1.5em;
-}
+  .content-subhead {
+      text-transform: uppercase;
+      color: #aaa;
+      border-bottom: 1px solid #eee;
+      padding: 0.4em 0;
+      font-size: 80%;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    line-height: 1.5em;
+  }
 
-.content {
-    padding: 2em 3em 0;
-}
+  .content {
+      padding: 2em 3em 0;
+  }
 
-.post {
-    padding-bottom: 2em;
-}
-.post-title {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 0.2em;
-}
-.post-avatar {
-    border-radius: 50px;
-    float: right;
-    margin-left: 1em;
-}
-.post-description {
-    font-family: Georgia, "Cambria", serif;
-    color: #444;
-    line-height: 1.8em;
-}
-.post-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
-}
+  .post {
+      padding-bottom: 2em;
+  }
+  .post-title {
+      font-size: 2em;
+      color: #222;
+      margin-bottom: 0.2em;
+  }
+  .post-avatar {
+      border-radius: 50px;
+      float: right;
+      margin-left: 1em;
+  }
+  .post-description {
+      font-family: Georgia, "Cambria", serif;
+      color: #444;
+      line-height: 1.8em;
+  }
+  .post-meta {
+      color: #999;
+      font-size: 90%;
+      margin: 0;
+  }
 
-.entry-content a, .entry-content > p > span, .entry-content > p > span {
-  font-family: Monaco;
-  font-size: 0.9em;
-  /*padding: 0.1em 0.4em;*/
-  /*background: #452632;*/
-  border-radius: 5px;
+  .entry-content a, .entry-content > p > span, .entry-content > p > span {
+    font-family: Monaco;
+    font-size: 0.9em;
+    /*padding: 0.1em 0.4em;*/
+    /*background: #452632;*/
+    border-radius: 5px;
 
-  background-color: #F7F7F9;
-  border: 1px solid #E1E1E8;
-  color: #DD1144;
-  padding: 2px 4px;
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    color: #DD1144;
+    padding: 2px 4px;
 
-}
+  }
 
-.post-category {
-    margin: 0 0.1em;
-    padding: 0.3em 1em;
-    color: #fff;
-    background: #999;
-    font-size: 80%;
-}
-    .post-category-design, .post-category-alpha{
-        background: #5aba59;
-    }
-    .post-category-pure, .post-category-beta {
-        background: #4d85d1;
-    }
-    .post-category-yui, .post-category-teta {
-        background: #8156a7;
-    }
-    .post-category-js, .post-category-zeta {
-        background: #df2d4f;
-    }
+  .post-category {
+      margin: 0 0.1em;
+      padding: 0.3em 1em;
+      color: #fff;
+      background: #999;
+      /*font-size: 80%;*/
+  }
+      .post-category-design, .post-category-alpha{
+          background: #5aba59;
+      }
+      .post-category-pure, .post-category-beta {
+          background: #4d85d1;
+      }
+      .post-category-yui, .post-category-teta {
+          background: #8156a7;
+      }
+      .post-category-js, .post-category-zeta {
+          background: #df2d4f;
+      }
 
-.post-images {
-    margin: 1em 0;
-}
-.post-image-meta {
+  .post-images {
+      margin: 1em 0;
+  }
+  .post-image-meta {
     margin-top: -3.5em;
     margin-left: 1em;
     color: #fff;

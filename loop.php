@@ -26,7 +26,8 @@ unset ($post_id);
         <header class="post-header">
           <img class="post-avatar" width="48" height="48" src="https://1.gravatar.com/avatar/738f5eacec5048869fd3f6866f39d1af?d=https%3A%2F%2Fidenticons.github.com%2Ff816fb5e358e95c718f79cc25ee91855.png&r=x&s=48" alt="me :-)">
           <h2 class="post-title entry-title"><?php print_post_title(); ?></h2>
-          <p class="meta">
+          <p class="post-meta">
+            <span class="post-date"><?php echo get_the_date( $d );?></span>.
             By
             <a class="post-author" href="#" ><?php the_author(); ?></a>
             in 
