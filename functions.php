@@ -38,7 +38,14 @@ add_filter( 'the_content', function ($content) {
     //Find next .... for closing
     $pos = strpos($value, $close);
     if (FALSE !== $pos) {
-      $_content .= "<pre role=\"hw\"><code>" . substr($value, 0, $pos-1) . '</code></pre>' . substr($value, $pos+strlen($close)+1);
+      if (substr($value, 0, 1) != "\n") {
+      //die('sasa');
+        $pos_class_def = strpos($value, "\n");
+        $class = substr($value, 0, $pos_class_def - 1);
+        //$value = substr($value, $pos_class_def);
+      }
+      
+      $_content .= "<pre role=\"hw\"><code class=\"{$class}\">" . trim(substr($value, $pos_class_def+1, $pos - $pos_class_def)) . '</code></pre>' . substr($value, $pos+strlen($close)+1);
     } else {
       $_content .= $value;
     }
