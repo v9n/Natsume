@@ -19,14 +19,16 @@ $posts=$wpdb->get_results($wpdb->prepare(
 ));
 ?>
 
-<div>
-  <h2 id='also-read-title'>Also read...</h2>
-  <ul id='also-read-items'>
+<div class="also">
+  <h2 class='also-read-title'>Also read...</h2>
+  <ul class='also-read-items'>
   <?php for($i=0; $i<count($posts); $i++): ?>
     <li>
-      <a href="<?php echo get_permalink($posts[$i]->post_id); ?>">
-        <h3><?php echo get_the_title($posts[$i]->post_id); ?></h3>
-      </a>
+      <h3>
+        <a href="<?php echo get_permalink($posts[$i]->post_id); ?>">
+        <?php echo get_the_title($posts[$i]->post_id); ?>
+        </a>
+      </h3>
     </li>
   <?php endfor; ?>
   </ul>

@@ -134,13 +134,17 @@ blockquote {
 }
 
 .entry-content a, .entry-content > p > span, .entry-content > p > span {
-  color: #E2F7CE;
   font-family: Monaco;
-  font-weight: bold;
   font-size: 0.9em;
-  padding: 0.1em 0.4em;
-  background: #452632;
-  border-radius: 5px; 
+  /*padding: 0.1em 0.4em;*/
+  /*background: #452632;*/
+  border-radius: 5px;
+
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  color: #DD1144;
+  padding: 2px 4px;
+
 }
 
 .post-category {
@@ -172,6 +176,20 @@ blockquote {
     color: #fff;
     text-shadow: 0 1px 1px #333;
 }
+
+/**Also block*/
+.also {
+  border-top: 1px solid #EEEEEE;
+  padding-top: 40px;
+}
+
+.also-read-items {
+    list-style: none outside none;
+}
+.also-read-items a{
+  line-height: 1.3em;
+}
+
 
 .footer {
     text-align: center;
