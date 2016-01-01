@@ -9,7 +9,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.5">
 		<title><?php wp_title( 'by', true, 'right' ); bloginfo( 'name' ); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/css/pure-ecb2a387c291b6f85ebada1054f33e09.css" />
+
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/default.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_directory'); ?>/highlight/styles/tomorrow-night.css" />
